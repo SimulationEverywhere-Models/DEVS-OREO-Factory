@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>The Oreo Manufacture is designed by ChangGao and XiangyuChen from Carleton University.
+<Models>
+    <Model name="Oreofactory" type="coupled" description="a coupled system for real Oreo Manufacture Process">
+        <Inputs>
+            <Port name="MaterailIN" type="double" description="na"/>
+        </Inputs>
+        <Outputs>
+            <Port name="ProductOut" type="double" description="na"/>
+        </Outputs>
+        <Files>
+            <File name="main_top.cpp" type="CPP" location="/top_model"/>
+            <File name="maintop_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="maintop_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="maintop_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+    </Model>
+	<Model name="OreoManufacture" type="coupled" description="a coupled system for real Oreo Manufacture Process">
+		<Inputs>
+			<Port name="MaterailIN" type="double" description="na"/>
+		</Inputs>
+		<Outputs>
+			<Port name="ProductOut" type="double" description="na"/>
+            <Port name="ProcessDone" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_Manufacturing.cpp" type="CPP" location="/test"/>
+            <File name="manufact_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="manufact_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="manufact_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+	<Model name="RawMaterial" type="coupled" description="a coupled system for raw materials processing.">
+		<Inputs>
+			<Port name="RawMaterialIN" type="double" description="na"/>
+			<Port name="ProcessDone" type="double" description="na"/>
+		</Inputs>
+		<Outputs>
+			<Port name="RawMaterialOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_RawMaterial.cpp" type="CPP" location="/test"/>
+            <File name="rawmaterial_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="rawmaterial_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="rawmaterial_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Inspector" type="coupled" description="a coupled system for checking and classify raw materials.">
+		<Inputs>
+			<Port name="RawMaterialIN" type="double" description="na"/>			
+		</Inputs>
+		<Outputs>
+			<Port name="Biscuits" type="double" description="na"/>
+			<Port name="Cream" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_Inspector.cpp" type="CPP" location="/test"/>
+            <File name="inspector_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="inspector_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="inspector_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Assembly" type="coupled" description="a coupled system for assemble and make the complete Oreo.">
+		<Inputs>
+			<Port name="Biscuits" type="double" description="na"/>
+			<Port name="Cream" type="double" description="na"/>			
+		</Inputs>
+		<Outputs>
+			<Port name="Oreo" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_assembly.cpp" type="CPP" location="/test"/>
+            <File name="assembly_biscuit_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="assembly_cream_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="assembly_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="assembly_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Queue" type="atomic" description="a model to manage the materials which are waiting .">
+		<Inputs>
+			<Port name="QueueIN" type="double" description="na"/>
+            <Port name="QueueDone" type="double" description="na"/>
+		</Inputs>
+		<Outputs>
+			<Port name="QueueOut" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_Queue.cpp" type="CPP" location="/test"/>
+            <File name="Queue.hpp" type="HPP" location="/atomics"/>
+            <File name="queue_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="queue_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="queue_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Process" type="atomic" description="a model to deal with the materials which are in queue.">
+		<Inputs>
+			<Port name="ProcessIN" type="double" description="na"/>
+		</Inputs>
+		<Outputs>
+			<Port name="ProcessOut" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_Process.cpp" type="CPP" location="/test"/>
+            <File name="Process.hpp" type="HPP" location="/atomics"/>
+            <File name="process_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="process_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="process_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+		<Model name="MaterialCheck" type="atomic" description="a model to check the material,the materials which are not ingredients of Oreo will be sent out.">
+		<Inputs>
+			<Port name="RawMaterialsIN" type="double" description="na"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="MaterialsOut" type="double" description="na"/>
+            <Port name="OtherMaterialsOut" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_mCheck.cpp" type="CPP" location="/test"/>
+            <File name="mCheck.hpp" type="HPP" location="/atomics"/>
+            <File name="mcheck_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="mcheck_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="mcheck_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+		<Model name="Classification" type="atomic" description="a model to classify the different materials.">
+		<Inputs>
+			<Port name="RawMaterialsIN" type="double" description="na"/>
+		</Inputs>
+		<Outputs>
+			<Port name="Biscuits" type="double" description="na"/>
+			<Port name="Cream" type="double" description="na"/>	
+		</Outputs>
+        <Files>
+            <File name="main_Classification.cpp" type="CPP" location="/test"/>
+            <File name="Classification.hpp" type="HPP" location="/atomics"/>
+            <File name="classify_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="classify_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="classify_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Formation" type="atomic" description="a model to formulate the biscuits of Oreo.">
+		<Inputs>
+			<Port name="BiscuitsIN" type="double" description="na"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="FormulatedBiscuitsOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_Formation.cpp" type="CPP" location="/test"/>
+            <File name="Formation.hpp" type="HPP" location="/atomics"/>
+            <File name="formation_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="formation_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="formation_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Bake" type="atomic" description="a model to bake the biscuits of Oreo.">
+		<Inputs>
+			<Port name="FormulatedBiscuitsIN" type="double" description="na"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="BakedBiscuitsOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_bake_test.cpp" type="CPP" location="/test"/>
+            <File name="Bake.hpp" type="HPP" location="/atomics"/>
+            <File name="bake_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="bake_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="bake_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+    </Model>
+    <Model name="BrokenCheck" type="atomic" description="a model to check baked biscuits are completed or not, unqualified biscuits will be sent out.">
+		<Inputs>
+			<Port name="BakedBiscuitsIN" type="double" description="na"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="CheckedBiscuitsOUT" type="double" description="na"/>
+            <Port name="BrokenBiscuitsOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_brokencheck_test.cpp" type="CPP" location="/test"/>
+            <File name="Brokencheck.hpp" type="HPP" location="/atomics"/>
+            <File name="brokencheck_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="brokencheck_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="brokencheck_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Workshop" type="atomic" description="a model to assemble the complete Oreo.">
+		<Inputs>
+			<Port name="CheckedBiscuitsIN" type="double" description="na"/>	
+			<Port name="CreamIN" type="double" description="na"/>		
+		</Inputs>
+		<Outputs>
+			<Port name="OreosOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_workshop_test.cpp" type="CPP" location="/test"/>
+            <File name="Workshop.hpp" type="HPP" location="/atomics"/>
+            <File name="workshop_biscuit_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="workshop_cream_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="workshop_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="workshop_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+    <Model name="Package" type="atomic" description="a model to make the package of Oreo.">
+		<Inputs>
+			<Port name="OreosIN" type="double" description="na"/>	
+		</Inputs>
+		<Outputs>
+			<Port name="ProductsOUT" type="double" description="na"/>
+		</Outputs>
+        <Files>
+            <File name="main_package_test.cpp" type="CPP" location="/test"/>
+            <File name="Package.hpp" type="HPP" location="/atomics"/>
+            <File name="package_input_test.txt" type="TXT" location="/input_data"/>
+            <File name="package_test_output_messages.txt" type="TXT" location="/simulation_results"/>
+            <File name="package_test_output_state.txt" type="TXT" location="/simulation_results"/>
+        </Files>
+	</Model>
+</Models>
+</p>

@@ -1,0 +1,44 @@
+00:00:00:000
+State for model input_reader_con is next time: 00:00:00:000
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:0
+00:00:00:000
+State for model input_reader_con is next time: 00:00:10:000
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:0
+00:00:10:000
+State for model input_reader_con is next time: 00:00:02:000
+State for model formation1 is 
+ foramtionNum: 2 formationTimes:1
+00:00:12:000
+State for model input_reader_con is next time: 00:03:48:000
+State for model formation1 is 
+ foramtionNum: 2 formationTimes:1
+00:00:22:000
+State for model input_reader_con is next time: 00:03:48:000
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:1
+00:04:00:000
+State for model input_reader_con is next time: 00:00:20:000
+State for model formation1 is 
+ foramtionNum: 6 formationTimes:2
+00:04:10:000
+State for model input_reader_con is next time: 00:00:20:000
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:2
+00:04:20:000
+State for model input_reader_con is next time: 00:02:10:000
+State for model formation1 is 
+ foramtionNum: 8 formationTimes:3
+00:04:30:000
+State for model input_reader_con is next time: 00:02:10:000
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:3
+00:06:30:000
+State for model input_reader_con is next time: inf
+State for model formation1 is 
+ foramtionNum: 10 formationTimes:4
+00:06:40:000
+State for model input_reader_con is next time: inf
+State for model formation1 is 
+ foramtionNum: 0 formationTimes:4

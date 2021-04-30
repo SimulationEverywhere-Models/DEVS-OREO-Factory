@@ -1,0 +1,33 @@
+00:00:00:000
+State for model input_reader is next time: 00:00:00:000
+State for model bake1 is Bake: 0 & transmitting: 0
+00:00:00:000
+State for model input_reader is next time: 00:00:10:000
+State for model bake1 is Bake: 0 & transmitting: 0
+00:00:10:000
+State for model input_reader is next time: 00:00:02:000
+State for model bake1 is Bake: 2 & transmitting: 1
+00:00:12:000
+State for model input_reader is next time: 00:03:48:000
+State for model bake1 is Bake: 4 & transmitting: 1
+00:00:22:010
+State for model input_reader is next time: 00:03:48:000
+State for model bake1 is Bake: 0 & transmitting: 0
+00:04:00:000
+State for model input_reader is next time: 00:00:20:000
+State for model bake1 is Bake: 6 & transmitting: 1
+00:04:10:010
+State for model input_reader is next time: 00:00:20:000
+State for model bake1 is Bake: 0 & transmitting: 0
+00:04:20:000
+State for model input_reader is next time: 00:02:10:000
+State for model bake1 is Bake: 8 & transmitting: 1
+00:04:30:010
+State for model input_reader is next time: 00:02:10:000
+State for model bake1 is Bake: 0 & transmitting: 0
+00:06:30:000
+State for model input_reader is next time: inf
+State for model bake1 is Bake: 10 & transmitting: 1
+00:06:40:010
+State for model input_reader is next time: inf
+State for model bake1 is Bake: 0 & transmitting: 0

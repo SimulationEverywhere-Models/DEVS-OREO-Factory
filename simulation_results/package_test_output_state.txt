@@ -1,0 +1,44 @@
+00:00:00:000
+State for model input_reader is next time: 00:00:00:000
+State for model package1 is 
+ productout: 0 product num: 0
+00:00:00:000
+State for model input_reader is next time: 00:00:10:000
+State for model package1 is 
+ productout: 0 product num: 0
+00:00:10:000
+State for model input_reader is next time: 00:00:02:000
+State for model package1 is 
+ productout: 2 product num: 1
+00:00:12:000
+State for model input_reader is next time: 00:03:48:000
+State for model package1 is 
+ productout: 4 product num: 2
+00:00:22:000
+State for model input_reader is next time: 00:03:48:000
+State for model package1 is 
+ productout: 4 product num: 2
+00:04:00:000
+State for model input_reader is next time: 00:00:20:000
+State for model package1 is 
+ productout: 6 product num: 3
+00:04:10:000
+State for model input_reader is next time: 00:00:20:000
+State for model package1 is 
+ productout: 6 product num: 3
+00:04:20:000
+State for model input_reader is next time: 00:02:10:000
+State for model package1 is 
+ productout: 8 product num: 4
+00:04:30:000
+State for model input_reader is next time: 00:02:10:000
+State for model package1 is 
+ productout: 8 product num: 4
+00:06:30:000
+State for model input_reader is next time: inf
+State for model package1 is 
+ productout: 10 product num: 5
+00:06:40:000
+State for model input_reader is next time: inf
+State for model package1 is 
+ productout: 10 product num: 5

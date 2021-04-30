@@ -1,0 +1,65 @@
+00:00:00:000
+State for model input_reader is next time: 00:00:00:000
+State for model input_reader2 is next time: 00:00:00:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 0	 cream: 0
+00:00:00:000
+State for model input_reader is next time: 00:00:10:000
+State for model input_reader2 is next time: 00:01:10:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 0	 cream: 0
+00:00:10:000
+State for model input_reader is next time: 00:20:20:000
+State for model input_reader2 is next time: 00:01:10:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 0	 cream: 2
+00:01:10:000
+State for model input_reader is next time: 00:20:20:000
+State for model input_reader2 is next time: 00:21:20:000
+State for model workshop1 is 
+ Oreo: 2	 biscuitsnum: 2	 cream: 2
+00:01:25:000
+State for model input_reader is next time: 00:20:20:000
+State for model input_reader2 is next time: 00:21:20:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 2	 cream: 2
+00:20:30:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:21:20:000
+State for model workshop1 is 
+ Oreo: 2	 biscuitsnum: 2	 cream: 4
+00:20:45:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:21:20:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 2	 cream: 4
+00:22:30:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:21:15:000
+State for model workshop1 is 
+ Oreo: 4	 biscuitsnum: 4	 cream: 4
+00:22:45:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:21:15:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 4	 cream: 4
+00:43:45:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:23:07:000
+State for model workshop1 is 
+ Oreo: 3	 biscuitsnum: 3	 cream: 4
+00:44:00:000
+State for model input_reader is next time: 00:25:15:000
+State for model input_reader2 is next time: 00:23:07:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 3	 cream: 4
+00:45:45:000
+State for model input_reader is next time: 00:20:07:000
+State for model input_reader2 is next time: 00:23:07:000
+State for model workshop1 is 
+ Oreo: 3	 biscuitsnum: 3	 cream: 3
+00:46:00:000
+State for model input_reader is next time: 00:20:07:000
+State for model input_reader2 is next time: 00:23:07:000
+State for model workshop1 is 
+ Oreo: 0	 biscuitsnum: 3	 cream: 3
